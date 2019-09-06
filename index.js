@@ -1,4 +1,4 @@
-var cart = [];
+let cart = [];
 
 function getCart() {
  return cart;
@@ -12,11 +12,11 @@ function setCart(c) {
 
 function addToCart(item) {
  //initialize object
- var newCart = {
+ let newCart = {
    itemName: "itemName",
    itemPrice: "itemPrice"
  }; 
-  var price = Math.floor(Math.random()*Math.floor(100));
+  let price = Math.floor(Math.random()*Math.floor(100));
   newCart.itemName = [item];
   newCart.itemPrice = price;
   cart.push(newCart);
@@ -24,9 +24,9 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  var length = cart.length;
-  var list = [];
-  var i=0;
+  let length = cart.length;
+  let list = [];
+  let i=0;
   if (length === 0) {
     return `Your shopping cart is empty.`
   } else if (length === 1){
@@ -41,25 +41,25 @@ function viewCart() {
     }
 
 function total() {
-  var length = cart.length;
+  let length = cart.length;
   var total = 0;
   for (var i=0; i < length; i++){
-    var price = parseInt(cart[i].itemPrice, 10);
+    let price = parseInt(cart[i].itemPrice, 10);
     total = total + price;
   } return total;
 }
 
 function removeFromCart(item) {
-  var length = cart.length;
-  var items = [];
+  let length = cart.length;
+  let items = [];
   
-    for (var i=0; i < length; i++){
+    for (let i=0; i < length; i++){
     //items[i] = cart[i].itemName;
     items.push(cart[i].itemName);
     } 
     
    
-    for (var n=0; n < length; n++){
+    for (let n=0; n < length; n++){
     if (items[n] !== item){ 
     } else if (items[n] === item){
       cart.splice(n, 1);
