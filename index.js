@@ -24,28 +24,26 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  let length = cart.length
   let list = []
   let i=0
-  if (length === 0) {
+  if (cart.length === 0) {
     return `Your shopping cart is empty.`
-  } else if (length === 1){
+  } else if (cart.length === 1){
     list.push(` ${cart[i].itemName} at $${cart[i].itemPrice}.`)
    return `In your cart, you have${list.toString()}`
-    } while (i < length-1){
+    } while (i < cart.length-1){
       list.push(` ${cart[i].itemName} at $${cart[i].itemPrice}`)
       i++
-      } if (i === length-1){
+      } if (i === cart.length-1){
         list.push(` and ${cart[i].itemName} at $${cart[i].itemPrice}`)
         } return `In your cart, you have${list.toString()}.`
     }
 
 function total() {
-  let length = cart.length
-  var total = 0
-  for (var i=0; i < length; i++){
+  let total = 0
+  for (let i=0; i < cart.length; i++){
     let price = parseInt(cart[i].itemPrice, 10)
-    total = total + price
+    total += price
   } return total
 }
 
