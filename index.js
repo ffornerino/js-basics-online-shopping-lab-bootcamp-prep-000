@@ -9,7 +9,6 @@ function setCart(c) {
   return cart
 }
 
-
 function addToCart(item) {
  //initialize object
  let newCart = {
@@ -29,15 +28,18 @@ function viewCart() {
   if (cart.length === 0) {
     return `Your shopping cart is empty.`
   } else if (cart.length === 1){
-    list.push(` ${cart[i].itemName} at $${cart[i].itemPrice}.`)
-   return `In your cart, you have${list.toString()}`
-    } while (i < cart.length-1){
-      list.push(` ${cart[i].itemName} at $${cart[i].itemPrice}`)
-      i++
-      } if (i === cart.length-1){
-        list.push(` and ${cart[i].itemName} at $${cart[i].itemPrice}`)
-        } return `In your cart, you have${list.toString()}.`
-    }
+      list.push(` ${cart[i].itemName} at $${cart[i].itemPrice}.`)
+      return `In your cart, you have${list.toString()}`
+      } 
+  while (i < cart.length-1){
+    list.push(` ${cart[i].itemName} at $${cart[i].itemPrice}`)
+    i++
+    } 
+  if (i === cart.length-1){
+    list.push(` and ${cart[i].itemName} at $${cart[i].itemPrice}`)
+  } 
+  return `In your cart, you have${list.toString()}.`
+}
 
 function total() {
   let total = 0
@@ -59,10 +61,8 @@ function removeFromCart(item) {
 }
  
   
-
-
 function placeOrder(cardNumber) {
-  // write your code here
+  
 }
 
 
