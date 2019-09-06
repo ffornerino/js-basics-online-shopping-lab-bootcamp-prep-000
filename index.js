@@ -65,8 +65,12 @@ function placeOrder(cardNumber) {
   if (!cardNumber){
     return "Sorry, we don't have a credit card on file for you."
   }
+  let totalCost = total()
+  for (i=0; i <cart.length; i++){
+    delete cart[i]
+  }
   
-  return 
+  return `Your total cost is $${totaCost}, which will be charged to the card ${cardNumber}.`
 }
 
 
