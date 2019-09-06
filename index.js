@@ -60,8 +60,9 @@ function removeFromCart(item) {
       cart.splice(n, 1)
       //var newCart = cart
      // return newCart
-    } else return "That item is not in your cart."
+    } 
   } 
+  return "that item is not in your cart"
 }
  
   
