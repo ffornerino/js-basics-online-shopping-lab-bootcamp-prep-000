@@ -67,7 +67,7 @@ function placeOrder(cardNumber) {
   }
   let totalCost = total()
   for (let i=0; i <cart.length; i++){
-    delete cart[i]
+    cart[i].pop()
   }
   
   return `Your total cost is $${totalCost}, which will be charged to the card ${cardNumber}.`
